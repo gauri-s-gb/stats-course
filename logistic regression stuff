@@ -1,0 +1,131 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gauri-s-gb/stats-course/blob/main/logistic%20regression%20stuff\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Logistic regression"
+      ],
+      "metadata": {
+        "id": "zAytboHNfQU7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import necessary packages\n",
+        "import os\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "import pandas as pd\n",
+        "from sklearn.datasets import load_iris\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from sklearn.preprocessing import StandardScaler, LabelEncoder\n",
+        "from sklearn.linear_model import LogisticRegression\n",
+        "from sklearn.neighbors import KNeighborsClassifier\n",
+        "from sklearn.metrics import accuracy_score, classification_report\n",
+        "from sklearn.inspection import DecisionBoundaryDisplay"
+      ],
+      "metadata": {
+        "id": "DzIL9Fz8fQU8"
+      },
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "iris = load_iris()\n",
+        "X = iris.data[:, :4]\n",
+        "y = iris.target\n",
+        "type(X)"
+      ],
+      "metadata": {
+        "id": "aCshgPJryMgb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "02750d88-f686-47cd-c9cf-07c525f189f0"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "numpy.ndarray"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Perform Logisitic Regression and kNN on this dataset following the below steps:\n",
+        "\n",
+        "1.  Preprocess the data\n",
+        "    * Check for empty values or nulls and perform necessary imputations/deletions\n",
+        "    * Encode the class variable numerically using the label encoder\n",
+        "    * Scale features as necessary\n",
+        "2. Logistic regression\n",
+        "    * Create a logistic regression model\n",
+        "    * Fit the logistic regression model to the train data\n",
+        "    * Get predictions for the class variable (y)\n",
+        "    * Get the train accuracy and test accuracy. Here accuracy is basically the fraction of correctly classified samples, i.e., y_pred==y_true.\n",
+        "3. Plotting the decision boundaries for Logistic Regression\n",
+        "    * Create scatter plots taking any two features at a time\n",
+        "    * Plot the decision boundary using sklearn's DecisionBoundaryDisplay\n",
+        "4. kNN\n",
+        "    * Create a kNN model\n",
+        "    * Fit the kNN to the train data\n",
+        "    * Get predictions for the class variable (y)\n",
+        "    * Get the train accuracy and test accuracy. Here accuracy is basically the fraction of correctly classified samples, i.e., y_pred==y_true.\n",
+        "5. Plotting the decision boundaries for Logistic Regression\n",
+        "    * Create scatter plots taking any two features at a time\n",
+        "    * Plot the decision boundary using sklearn's DecisionBoundaryDisplay\n",
+        "\n",
+        "    Start with these two features: Petal Length and Petal Width\n",
+        "    "
+      ],
+      "metadata": {
+        "id": "nvX0TKFfgq3x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "KjdZw9W0eFx0"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
